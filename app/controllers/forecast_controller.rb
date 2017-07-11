@@ -17,7 +17,7 @@ class ForecastController < ApplicationController
     # ==========================================================================
 
 # url = "https://api.darksky.net/forecast/389c3b3d091ca54161e5e258e6d6eea1/37.8267,-122.4233"
-url = "https://api.darksky.net/forecast/389c3b3d091ca54161e5e258e6d6eea1/" + @lat + @lng
+url = "https://api.darksky.net/forecast/389c3b3d091ca54161e5e258e6d6eea1/" + @lat, + @lng
 open(url).read
 parsed_data = JSON.parse(open(url).read)
 # latitude = parsed_data["results"][0]["geometry"]["location"]["lat"]
